@@ -1,0 +1,42 @@
+{
+  "title": "日程",
+  "addSchedule": "添加日程",
+  "editSchedule": "编辑日程",
+  "noSchedule": "还没有日程",
+  "noScheduleHint": "点击右上角 + 添加一个",
+  "allSchedules": "全部日程",
+  "completedSchedules": "已完成",
+  "pendingSchedules": "进行中",
+  "field": {
+    "title": "标题",
+    "time": "时间",
+    "endTime": "结束时间",
+    "location": "地点",
+    "note": "备注",
+    "type": "类型",
+    "repeat": "重复",
+    "color": "颜色",
+    "reminder": "提醒"
+  },
+  "placeholder": {
+    "title": "请输入日程标题",
+    "location": "可选",
+    "note": "可添加备注"
+  },
+  "type": {
+    "schedule": "普通",
+    "anniversary": "纪念日",
+    "birthday": "生日"
+  },
+  "repeat": {
+    "none": "不重复",
+    "daily": "每天",
+    "weekly": "每周",
+    "monthly": "每月",
+    "yearly": "每年"
+  },
+  "confirmDelete": "确定删除此日程？",
+  "deleteSuccess": "日程已删除",
+  "addSuccess": "日程已添加",
+  "updateSuccess": "日程已更新"
+}

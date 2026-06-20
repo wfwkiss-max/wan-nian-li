@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "WanNianLi",
+    "tagline": "Solar · Lunar · Almanac"
+  },
+  "nav": {
+    "calendar": "Calendar",
+    "almanac": "Almanac",
+    "schedule": "Schedule",
+    "tools": "Tools",
+    "settings": "Settings"
+  },
+  "action": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "add": "Add",
+    "done": "Done",
+    "back": "Back",
+    "more": "More",
+    "export": "Export",
+    "import": "Import",
+    "today": "Today",
+    "reset": "Reset"
+  },
+  "status": {
+    "loading": "Loading...",
+    "empty": "No data",
+    "success": "Success",
+    "failed": "Failed"
+  },
+  "weekday": {
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat"
+  },
+  "weekdayFull": {
+    "sun": "Sunday",
+    "mon": "Monday",
+    "tue": "Tuesday",
+    "wed": "Wednesday",
+    "thu": "Thursday",
+    "fri": "Friday",
+    "sat": "Saturday"
+  },
+  "month": {
+    "1": "Jan",
+    "2": "Feb",
+    "3": "Mar",
+    "4": "Apr",
+    "5": "May",
+    "6": "Jun",
+    "7": "Jul",
+    "8": "Aug",
+    "9": "Sep",
+    "10": "Oct",
+    "11": "Nov",
+    "12": "Dec"
+  },
+  "year": ""
+}

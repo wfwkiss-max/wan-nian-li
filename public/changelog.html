@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4f7df5" />
+    <meta name="description" content="万年历 App 版本更新日志。" />
+    <title>更新日志 - 万年历</title>
+    <style>
+      :root {
+        --bg: #fafbfc; --card: #ffffff; --text: #1a1a2e; --secondary: #5a6a7e;
+        --border: #e4e9f0; --accent: #4f7df5; --accent-to: #6c5ce7;
+        --accent-soft: rgba(79, 125, 245, 0.08);
+        --success: #10b981; --warning: #f59e0b; --info: #3b82f6;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0c1222; --card: #1a2540; --text: #e8ecf4; --secondary: #8e9bae;
+          --border: #253350; --accent: #5b8af5; --accent-to: #7c6cf7;
+          --accent-soft: rgba(91, 138, 245, 0.15);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0; padding: 0; background: var(--bg); color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        line-height: 1.75; font-size: 15px; -webkit-font-smoothing: antialiased;
+      }
+      .brand-header {
+        position: sticky; top: 0; z-index: 10; background: var(--card);
+        border-bottom: 1px solid var(--border); padding: 14px 20px;
+        display: flex; align-items: center; gap: 12px;
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+      }
+      .brand-logo {
+        width: 40px; height: 40px; border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-to) 100%);
+        display: flex; align-items: center; justify-content: center;
+        color: white; font-weight: bold; font-size: 22px;
+        box-shadow: 0 4px 12px var(--accent-soft);
+      }
+      .brand-text h1 { margin: 0; font-size: 17px; font-weight: 600; }
+      .brand-text p { margin: 0; font-size: 12px; color: var(--secondary); }
+      .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; }
+      .doc-title { font-size: 30px; margin: 16px 0 4px; font-weight: 700; letter-spacing: -0.5px; }
+      .doc-subtitle { color: var(--secondary); font-size: 13px; margin-bottom: 28px; }
+      h2 {
+        font-size: 19px; margin: 36px 0 12px; padding-bottom: 8px;
+        border-bottom: 2px solid var(--accent-soft); scroll-margin-top: 80px;
+      }
+      p, li { color: var(--text); }
+      ul { padding-left: 22px; }
+      li { margin-bottom: 6px; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .release {
+        background: var(--card); border: 1px solid var(--border);
+        border-radius: 12px; padding: 20px 22px; margin: 16px 0;
+        position: relative;
+      }
+      .release-header {
+        display: flex; align-items: center; gap: 10px;
+        margin-bottom: 12px; flex-wrap: wrap;
+      }
+      .release-version {
+        font-size: 18px; font-weight: 700; color: var(--accent);
+      }
+      .release-date {
+        font-size: 13px; color: var(--secondary);
+      }
+      .release-tag {
+        font-size: 11px; padding: 2px 10px; border-radius: 12px;
+        font-weight: 500;
+      }
+      .release-tag.latest { background: var(--success); color: white; }
+      .release-tag.beta { background: var(--warning); color: white; }
+
+      .release-section {
+        margin: 10px 0 10px 0;
+      }
+      .release-section-title {
+        font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+        color: var(--secondary); font-weight: 600; margin-bottom: 4px;
+      }
+      .release-section ul {
+        margin: 4px 0 0 0; padding-left: 22px;
+      }
+      .release-section li {
+        font-size: 14px; margin-bottom: 4px;
+      }
+      .release-section .emoji {
+        display: inline-block; width: 18px;
+      }
+      .new { color: var(--success); font-weight: 500; }
+      .fix { color: var(--info); font-weight: 500; }
+      .improve { color: var(--warning); font-weight: 500; }
+
+      .doc-footer {
+        margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+        text-align: center; color: var(--secondary); font-size: 12px;
+      }
+      .doc-footer .footer-brand {
+        display: inline-flex; align-items: center; gap: 8px;
+        margin-bottom: 8px; color: var(--text); font-weight: 500;
+      }
+      .doc-footer .footer-brand .brand-logo {
+        width: 24px; height: 24px; font-size: 14px; border-radius: 6px;
+      }
+      .doc-footer a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <header class="brand-header">
+      <div class="brand-logo">万</div>
+      <div class="brand-text">
+        <h1>万年历</h1>
+        <p>更新日志</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <h2 class="doc-title">更新日志</h2>
+      <p class="doc-subtitle">记录万年历 App 每一个版本的变化</p>
+
+      <div class="release">
+        <div class="release-header">
+          <div class="release-version">v1.0.1</div>
+          <div class="release-date">2025 年 1 月</div>
+          <div class="release-tag latest">最新</div>
+        </div>
+
+        <div class="release-section">
+          <div class="release-section-title"><span class="new">✨ 新增功能</span></div>
+          <ul>
+            <li>中英双语切换：完整支持简体中文 / English</li>
+            <li>智能语言检测：默认跟随浏览器语言，非中文区自动切英文</li>
+            <li>设置页新增语言选择器（跟随系统 / 中 / EN）</li>
+            <li>PWA Service Worker：支持完整离线访问</li>
+            <li>PWA screenshots：Chrome「添加到主屏」时展示 3 张应用截图</li>
+            <li>应用文档矩阵：隐私政策 / 用户协议 / 技术支持 / 更新日志 / 欢迎页 全部上线</li>
+          </ul>
+        </div>
+
+        <div class="release-section">
+          <div class="release-section-title"><span class="improve">⚡ 优化</span></div>
+          <ul>
+            <li>引入 react-i18next 框架，支持按命名空间懒加载</li>
+            <li>所有 UI 文案按命名空间拆分（common/calendar/schedule/settings/almanac/tools）</li>
+            <li>新增 platform 工具函数，自动识别 Capacitor 原生壳与 Web 环境</li>
+            <li>Service Worker 智能跳过原生壳，避免 iOS/Android WebView 报错</li>
+          </ul>
+        </div>
+
+        <div class="release-section">
+          <div class="release-section-title"><span class="fix">🛠 修复</span></div>
+          <ul>
+            <li>修复 Capacitor 监听器在 React StrictMode 下重复注册问题</li>
+            <li>修复 SwipeToDelete 在横向/纵向滑动方向锁定的边界条件</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="release">
+        <div class="release-header">
+          <div class="release-version">v1.0.0</div>
+          <div class="release-date">2025 年 1 月</div>
+          <div class="release-tag">首发</div>
+        </div>
+
+        <div class="release-section">
+          <div class="release-section-title"><span class="new">✨ 新增功能</span></div>
+          <ul>
+            <li>三历合一：公历、农历、老黄历同步显示</li>
+            <li>24 节气、传统节日、农历纪念日自动标注</li>
+            <li>每日宜忌、吉神凶煞查询</li>
+            <li>干支纪年、十二生肖、时辰</li>
+            <li>日程管理：标题/时间/地点/备注/重复/类型</li>
+            <li>6 套主题：经典 / iOS 26 / Google / 海岛 / 太极 / 禅意</li>
+            <li>深色 / 浅色模式自适应</li>
+            <li>动态字号适配</li>
+            <li>左右滑动切换月份</li>
+            <li>滑动删除日程（iOS 风格）</li>
+            <li>长按 / 点击完成日程</li>
+            <li>数据导入 / 导出（JSON 格式）</li>
+            <li>Apple HIG 完整兼容（44pt 触控目标）</li>
+            <li>全面屏安全区域适配</li>
+          </ul>
+        </div>
+
+        <div class="release-section">
+          <div class="release-section-title"><span class="improve">⚡ 优化</span></div>
+          <ul>
+            <li>农历算法优化（覆盖 1900-2100 年）</li>
+            <li>节气精确到分钟</li>
+            <li>日程点用颜色标记，月历视图一眼可辨</li>
+          </ul>
+        </div>
+
+        <div class="release-section">
+          <div class="release-section-title"><span class="fix">🛡 隐私</span></div>
+          <ul>
+            <li>不收集任何用户数据</li>
+            <li>所有数据本地存储（IndexedDB）</li>
+            <li>无第三方追踪 SDK</li>
+            <li>无广告</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>📅 未来计划</h2>
+      <ul>
+        <li>iCloud 同步（可选）</li>
+        <li>本地通知提醒</li>
+        <li>月相显示</li>
+        <li>节气养生建议</li>
+        <li>多语言支持（繁体 / 英文）</li>
+        <li>桌面小组件（iOS 16+）</li>
+        <li>Apple Watch 适配</li>
+      </ul>
+
+      <footer class="doc-footer">
+        <div class="footer-brand">
+          <div class="brand-logo">万</div>
+          <span>万年历 · WanNianLi</span>
+        </div>
+        <p>Made with ❤️ for Chinese culture</p>
+        <p style="margin-top: 12px;">
+          <a href="privacy.html">隐私政策</a> ·
+          <a href="support.html">技术支持</a> ·
+          <a href="eula.html">用户协议</a>
+        </p>
+        <p style="margin-top: 12px; opacity: 0.7;">© 2025 万年历 · 保留所有权利</p>
+      </footer>
+    </div>
+  </body>
+</html>

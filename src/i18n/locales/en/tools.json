@@ -1,0 +1,22 @@
+{
+  "title": "Tools",
+  "dateCalc": {
+    "name": "Date Calculator",
+    "desc": "Calculate days between two dates"
+  },
+  "dateDiff": {
+    "name": "Date Difference",
+    "desc": "Count days between two dates"
+  },
+  "weekday": {
+    "name": "Weekday Lookup",
+    "desc": "Find what day of week any date is"
+  },
+  "startDate": "Start date",
+  "endDate": "End date",
+  "targetDate": "Target date",
+  "calculate": "Calculate",
+  "result": "Result",
+  "days": "days",
+  "weekday": "Weekday"
+}

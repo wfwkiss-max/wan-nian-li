@@ -1,0 +1,21 @@
+{
+  "title": "黄历",
+  "selectDate": "选择日期",
+  "yearGanZhi": "年柱",
+  "monthGanZhi": "月柱",
+  "dayGanZhi": "日柱",
+  "lunarDate": "农历",
+  "zodiac": "生肖",
+  "solarTerm": "节气",
+  "yi": "宜",
+  "ji": "忌",
+  "chong": "冲",
+  "sha": "煞",
+  "jiShen": "吉神宜趋",
+  "xiongShen": "凶煞宜避",
+  "taiShen": "胎神",
+  "wuXing": "五行",
+  "pengZu": "彭祖百忌",
+  "jianChu": "建除十二神",
+  "noData": "暂无黄历数据"
+}

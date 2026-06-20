@@ -1,0 +1,21 @@
+{
+  "title": "Almanac",
+  "selectDate": "Select date",
+  "yearGanZhi": "Year Pillar",
+  "monthGanZhi": "Month Pillar",
+  "dayGanZhi": "Day Pillar",
+  "lunarDate": "Lunar Date",
+  "zodiac": "Zodiac",
+  "solarTerm": "Solar Term",
+  "yi": "Suitable",
+  "ji": "Avoid",
+  "chong": "Conflict",
+  "sha": "Sha",
+  "jiShen": "Auspicious Deities",
+  "xiongShen": "Inauspicious Deities",
+  "taiShen": "Fetal God",
+  "wuXing": "Five Element",
+  "pengZu": "Pengzu Taboo",
+  "jianChu": "12 Officers",
+  "noData": "No almanac data"
+}

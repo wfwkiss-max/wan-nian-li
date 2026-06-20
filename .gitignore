@@ -1,0 +1,105 @@
+# ===========================================
+# 依赖
+# ===========================================
+node_modules/
+.pnpm-store/
+
+# ===========================================
+# 构建产物
+# ===========================================
+dist/
+build/
+out/
+*.tsbuildinfo
+.cache/
+
+# ===========================================
+# Vercel 部署临时文件
+# ===========================================
+.vercel-tmp/
+
+# ===========================================
+# Android 签名（绝不能进 Git）
+# ===========================================
+*.keystore
+*.jks
+keystore.properties
+android/app/release.keystore
+android/keystore.properties
+
+# ===========================================
+# iOS 签名
+# ===========================================
+ios/App/*.p12
+ios/App/*.cer
+ios/App/*.mobileprovision
+ios/**/xcuserdata/
+ios/**/.DS_Store
+
+# ===========================================
+# Capacitor
+# ===========================================
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/.idea/
+android/captures/
+android/.cxx/
+android/app/release/
+android/app/debug/
+
+ios/App/Pods/
+ios/App/build/
+ios/App/.DS_Store
+
+# ===========================================
+# 环境变量
+# ===========================================
+.env
+.env.local
+.env.development
+.env.production
+*.env
+
+# ===========================================
+# IDE / 编辑器
+# ===========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.iml
+
+# ===========================================
+# 日志
+# ===========================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===========================================
+# 测试覆盖率
+# ===========================================
+coverage/
+.nyc_output/
+
+# ===========================================
+# 临时文件
+# ===========================================
+.tmp/
+temp/
+*.bak
+*.tmp
+
+# ===========================================
+# 本地资源
+# ===========================================
+resources/icon-only.png
+resources/splash-only.png

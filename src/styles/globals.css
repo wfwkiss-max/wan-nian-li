@@ -1,0 +1,494 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-primary: #f8fafd;
+  --color-bg-secondary: #f0f4f8;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f7f9fc;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #5a6a7e;
+  --color-text-tertiary: #8e9bae;
+  --color-border: #e4e9f0;
+  --color-divider: #eef2f7;
+  --color-shadow: rgba(30, 40, 80, 0.06);
+  --color-shadow-lg: rgba(30, 40, 80, 0.10);
+  --color-accent-gradient-from: #4f7df5;
+  --color-accent-gradient-to: #6c5ce7;
+  --color-nav-bg: rgba(255, 255, 255, 0.82);
+  --color-nav-border: rgba(228, 233, 240, 0.6);
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --keyboard-height: 0px;
+}
+
+.dark {
+  --color-bg-primary: #0c1222;
+  --color-bg-secondary: #141d30;
+  --color-bg-card: #1a2540;
+  --color-bg-card-hover: #1e2d4a;
+  --color-text-primary: #e8ecf4;
+  --color-text-secondary: #8e9bae;
+  --color-text-tertiary: #5a6a7e;
+  --color-border: #253350;
+  --color-divider: #1e2d4a;
+  --color-shadow: rgba(0, 0, 0, 0.20);
+  --color-shadow-lg: rgba(0, 0, 0, 0.30);
+  --color-accent-gradient-from: #5b8af5;
+  --color-accent-gradient-to: #7c6cf7;
+  --color-nav-bg: rgba(12, 18, 34, 0.88);
+  --color-nav-border: rgba(37, 51, 80, 0.6);
+}
+
+/* ===============================================
+ * iOS 26 Liquid Glass 主题
+ * 特点：背景彩色渐变、毛玻璃质感、更饱和的渐变主色
+ * =============================================== */
+
+/* 浅色 iOS */
+:root[data-ui-theme='ios'] {
+  --color-bg-primary: #f2f0f8;
+  --color-bg-secondary: #ebe7f4;
+  --color-bg-card: rgba(255, 255, 255, 0.62);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.78);
+  --color-text-primary: #1c1c2e;
+  --color-text-secondary: #5b5b75;
+  --color-text-tertiary: #8e8ea0;
+  --color-border: rgba(255, 255, 255, 0.55);
+  --color-divider: rgba(60, 60, 90, 0.08);
+  --color-shadow: rgba(80, 70, 200, 0.08);
+  --color-shadow-lg: rgba(80, 70, 200, 0.14);
+  --color-accent-gradient-from: #0a84ff;
+  --color-accent-gradient-to: #bf5af2;
+  --color-nav-bg: rgba(255, 255, 255, 0.55);
+  --color-nav-border: rgba(255, 255, 255, 0.6);
+  --ios-bg-gradient: linear-gradient(160deg, #d6e4ff 0%, #ead4ff 45%, #ffd6f0 100%);
+  --ios-glass-blur: blur(28px) saturate(180%);
+}
+
+/* 深色 iOS */
+:root[data-ui-theme='ios'].dark {
+  --color-bg-primary: #0a0a1f;
+  --color-bg-secondary: #13133a;
+  --color-bg-card: rgba(40, 36, 70, 0.55);
+  --color-bg-card-hover: rgba(50, 46, 86, 0.72);
+  --color-text-primary: #f5f5fa;
+  --color-text-secondary: #a8a8c2;
+  --color-text-tertiary: #6b6b8a;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-divider: rgba(255, 255, 255, 0.06);
+  --color-shadow: rgba(0, 0, 0, 0.35);
+  --color-shadow-lg: rgba(0, 0, 0, 0.50);
+  --color-accent-gradient-from: #5e9bff;
+  --color-accent-gradient-to: #d77bff;
+  --color-nav-bg: rgba(20, 18, 40, 0.55);
+  --color-nav-border: rgba(255, 255, 255, 0.1);
+  --ios-bg-gradient: linear-gradient(160deg, #0c0a2a 0%, #1f1148 45%, #3a0e5a 100%);
+  --ios-glass-blur: blur(30px) saturate(180%);
+}
+
+/* ===============================================
+ * Google Material You 主题
+ * 特点：纯色背景、大圆角、Google 四色渐变、高色调阴影
+ * =============================================== */
+
+/* 浅色 Google */
+:root[data-ui-theme='google'] {
+  --color-bg-primary: #f8f9fa;
+  --color-bg-secondary: #f1f3f4;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f8f9fa;
+  --color-text-primary: #202124;
+  --color-text-secondary: #5f6368;
+  --color-text-tertiary: #80868b;
+  --color-border: #dadce0;
+  --color-divider: #f1f3f4;
+  --color-shadow: rgba(60, 64, 67, 0.08);
+  --color-shadow-lg: rgba(60, 64, 67, 0.16);
+  --color-accent-gradient-from: #1a73e8;
+  --color-accent-gradient-to: #34a853;
+  --color-nav-bg: #ffffff;
+  --color-nav-border: #dadce0;
+  --google-bg-pattern: radial-gradient(circle at 0% 0%, rgba(26, 115, 232, 0.06) 0%, transparent 35%),
+                       radial-gradient(circle at 100% 100%, rgba(52, 168, 83, 0.06) 0%, transparent 35%),
+                       radial-gradient(circle at 50% 50%, rgba(251, 188, 4, 0.04) 0%, transparent 50%);
+}
+
+/* 深色 Google */
+:root[data-ui-theme='google'].dark {
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #1e1e1e;
+  --color-bg-card: #1f1f1f;
+  --color-bg-card-hover: #2a2a2a;
+  --color-text-primary: #e8eaed;
+  --color-text-secondary: #9aa0a6;
+  --color-text-tertiary: #5f6368;
+  --color-border: #2d2d2d;
+  --color-divider: #1e1e1e;
+  --color-shadow: rgba(0, 0, 0, 0.30);
+  --color-shadow-lg: rgba(0, 0, 0, 0.50);
+  --color-accent-gradient-from: #8ab4f8;
+  --color-accent-gradient-to: #81c995;
+  --color-nav-bg: #1f1f1f;
+  --color-nav-border: #2d2d2d;
+  --google-bg-pattern: radial-gradient(circle at 0% 0%, rgba(138, 180, 248, 0.10) 0%, transparent 35%),
+                       radial-gradient(circle at 100% 100%, rgba(129, 201, 149, 0.10) 0%, transparent 35%);
+}
+
+/* ===============================================
+ * 海岛 Tropical 主题
+ * 特点：天空蓝+沙黄渐变背景、珊珒绿/海浪蓝、放松温暖
+ * =============================================== */
+
+/* 浅色海岛 */
+:root[data-ui-theme='island'] {
+  --color-bg-primary: #f0f9ff;
+  --color-bg-secondary: #e0f2fe;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f7fbfd;
+  --color-text-primary: #0c4a6e;
+  --color-text-secondary: #0369a1;
+  --color-text-tertiary: #38bdf8;
+  --color-border: #bae6fd;
+  --color-divider: #e0f2fe;
+  --color-shadow: rgba(14, 116, 144, 0.08);
+  --color-shadow-lg: rgba(14, 116, 144, 0.18);
+  --color-accent-gradient-from: #06b6d4;
+  --color-accent-gradient-to: #10b981;
+  --color-nav-bg: rgba(255, 255, 255, 0.85);
+  --color-nav-border: #bae6fd;
+  --island-bg-gradient: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 30%, #fef3c7 100%);
+  --island-wave: radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.12) 0%, transparent 60%);
+}
+
+/* 深色海岛 */
+:root[data-ui-theme='island'].dark {
+  --color-bg-primary: #042f3a;
+  --color-bg-secondary: #064e5c;
+  --color-bg-card: #0a4a5c;
+  --color-bg-card-hover: #0e5970;
+  --color-text-primary: #ecfeff;
+  --color-text-secondary: #67e8f9;
+  --color-text-tertiary: #22d3ee;
+  --color-border: #155e75;
+  --color-divider: #064e5c;
+  --color-shadow: rgba(0, 0, 0, 0.30);
+  --color-shadow-lg: rgba(0, 0, 0, 0.50);
+  --color-accent-gradient-from: #22d3ee;
+  --color-accent-gradient-to: #34d399;
+  --color-nav-bg: rgba(10, 74, 92, 0.85);
+  --color-nav-border: #155e75;
+  --island-bg-gradient: linear-gradient(180deg, #042f3a 0%, #064e5c 50%, #0a4a5c 100%);
+  --island-wave: radial-gradient(ellipse at 50% 100%, rgba(34, 211, 238, 0.15) 0%, transparent 60%);
+}
+
+/* ===============================================
+ * 太极 Taiji 主题
+ * 特点：宣纸米白 / 墨黑阴阳、皭玖红 + 靁青、朱砂金主色
+ * =============================================== */
+
+/* 浅色太极：宣纸为底，墨为文，朱砂为强调 */
+:root[data-ui-theme='taiji'] {
+  --color-bg-primary: #f5f0e6;
+  --color-bg-secondary: #ebe4d3;
+  --color-bg-card: #fdfaf2;
+  --color-bg-card-hover: #f7f0df;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-tertiary: #8a8478;
+  --color-border: #d8cfb8;
+  --color-divider: #ebe4d3;
+  --color-shadow: rgba(60, 40, 20, 0.10);
+  --color-shadow-lg: rgba(60, 40, 20, 0.18);
+  --color-accent-gradient-from: #c1272d;
+  --color-accent-gradient-to: #1e3a5f;
+  --color-nav-bg: rgba(253, 250, 242, 0.85);
+  --color-nav-border: #d8cfb8;
+  --taiji-bg: radial-gradient(ellipse at 50% 0%, #f5f0e6 0%, #ebe4d3 100%);
+  --taiji-ink: rgba(26, 26, 26, 0.04);
+  --taiji-yang: #1a1a1a;
+  --taiji-yin: #fdfaf2;
+}
+
+/* 深色太极：墨为底，宣纸为文，金 + 青为强调 */
+:root[data-ui-theme='taiji'].dark {
+  --color-bg-primary: #0d0d0f;
+  --color-bg-secondary: #1a1a1e;
+  --color-bg-card: #16161a;
+  --color-bg-card-hover: #1f1f24;
+  --color-text-primary: #f5f0e6;
+  --color-text-secondary: #b8b0a0;
+  --color-text-tertiary: #7a7468;
+  --color-border: #2a2a30;
+  --color-divider: #1a1a1e;
+  --color-shadow: rgba(0, 0, 0, 0.50);
+  --color-shadow-lg: rgba(0, 0, 0, 0.70);
+  --color-accent-gradient-from: #d4a017;
+  --color-accent-gradient-to: #5e8ca7;
+  --color-nav-bg: rgba(22, 22, 26, 0.90);
+  --color-nav-border: #2a2a30;
+  --taiji-bg: radial-gradient(ellipse at 50% 0%, #16161a 0%, #0a0a0c 100%);
+  --taiji-ink: rgba(245, 240, 230, 0.03);
+  --taiji-yang: #f5f0e6;
+  --taiji-yin: #16161a;
+}
+
+/* ===============================================
+ * 禅意 Zen 主题（原佛教主题）
+ * 特点：佛光金 / 僧袉朱砂、蔵青、莲花卍字符
+ * =============================================== */
+
+/* 浅色佛教：佛光金底，卡片米白，僧袍朱 + 袈裟青 */
+:root[data-ui-theme='buddhist'] {
+  --color-bg-primary: #faf3e0;
+  --color-bg-secondary: #f0e4c3;
+  --color-bg-card: #fffbf0;
+  --color-bg-card-hover: #fdf5e0;
+  --color-text-primary: #3a2410;
+  --color-text-secondary: #6b4a2a;
+  --color-text-tertiary: #a08060;
+  --color-border: #d9b878;
+  --color-divider: #f0e4c3;
+  --color-shadow: rgba(120, 80, 20, 0.10);
+  --color-shadow-lg: rgba(120, 80, 20, 0.20);
+  --color-accent-gradient-from: #c1272d;
+  --color-accent-gradient-to: #b8860b;
+  --color-nav-bg: rgba(255, 251, 240, 0.88);
+  --color-nav-border: #d9b878;
+  --buddhist-bg: radial-gradient(ellipse at 50% -10%, #f8e8a8 0%, #faf3e0 40%, #f0e4c3 100%);
+  --buddhist-glow: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.35) 0%, transparent 50%);
+  --buddhist-saffron: #d4a017;
+  --buddhist-sangha: #c1272d;
+}
+
+/* 深色佛教：蔵青金底，卡片深茶，主色提亮金 + 朱 */
+:root[data-ui-theme='buddhist'].dark {
+  --color-bg-primary: #1a1208;
+  --color-bg-secondary: #2a1f10;
+  --color-bg-card: #221a0e;
+  --color-bg-card-hover: #2d2316;
+  --color-text-primary: #f5e6c8;
+  --color-text-secondary: #c9a878;
+  --color-text-tertiary: #8a7458;
+  --color-border: #3d2e18;
+  --color-divider: #2a1f10;
+  --color-shadow: rgba(0, 0, 0, 0.50);
+  --color-shadow-lg: rgba(0, 0, 0, 0.70);
+  --color-accent-gradient-from: #f0c33c;
+  --color-accent-gradient-to: #e84545;
+  --color-nav-bg: rgba(26, 18, 8, 0.90);
+  --color-nav-border: #3d2e18;
+  --buddhist-bg: radial-gradient(ellipse at 50% -10%, #3d2e18 0%, #221a0e 40%, #1a1208 100%);
+  --buddhist-glow: radial-gradient(circle at 50% 0%, rgba(240, 195, 60, 0.20) 0%, transparent 50%);
+  --buddhist-saffron: #f0c33c;
+  --buddhist-sangha: #e84545;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+}
+
+html.font-sm {
+  font-size: 14px;
+}
+
+html.font-lg {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* iOS 主题：body 使用彩色渐变背景 */
+:root[data-ui-theme='ios'] body {
+  background: var(--ios-bg-gradient);
+  background-attachment: fixed;
+}
+
+/* Google 主题：body 使用微弱色班点状背景 */
+:root[data-ui-theme='google'] body {
+  background-color: var(--color-bg-primary);
+  background-image: var(--google-bg-pattern, none);
+  background-attachment: fixed;
+}
+
+/* 海岛主题：body 使用天空+沙滩渐变背景 */
+:root[data-ui-theme='island'] body {
+  background: var(--island-bg-gradient);
+  background-attachment: fixed;
+}
+:root[data-ui-theme='island'] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--island-wave);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 太极主题：body 使用宣纸 / 墨底背景，叠加水墨噪点 */
+:root[data-ui-theme='taiji'] body {
+  background: var(--taiji-bg);
+  background-attachment: fixed;
+}
+:root[data-ui-theme='taiji'] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, var(--taiji-ink) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--taiji-ink) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--taiji-ink) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* 佛教主题：body 使用佛光金 / 蔵青金渐变，顶部佛光罩 */
+:root[data-ui-theme='buddhist'] body {
+  background: var(--buddhist-bg);
+  background-attachment: fixed;
+}
+:root[data-ui-theme='buddhist'] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--buddhist-glow);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-bg-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-bg-secondary);
+  }
+  .bg-card {
+    background-color: var(--color-bg-card);
+  }
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  .text-tertiary {
+    color: var(--color-text-tertiary);
+  }
+  .border-theme {
+    border-color: var(--color-border);
+  }
+  .shadow-card {
+    box-shadow: 0 1px 3px var(--color-shadow), 0 1px 2px var(--color-shadow);
+  }
+  .shadow-card-lg {
+    box-shadow: 0 4px 12px var(--color-shadow-lg), 0 1px 3px var(--color-shadow);
+  }
+  .nav-blur {
+    background-color: var(--color-nav-bg);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-color: var(--color-nav-border);
+  }
+  .accent-gradient {
+    background: linear-gradient(135deg, var(--color-accent-gradient-from), var(--color-accent-gradient-to));
+  }
+  .accent-gradient-text {
+    background: linear-gradient(135deg, var(--color-accent-gradient-from), var(--color-accent-gradient-to));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .safe-area-top {
+    padding-top: var(--safe-area-top);
+  }
+  .safe-area-bottom {
+    padding-bottom: var(--safe-area-bottom);
+  }
+
+  /* ============== iOS 26 液态玻璃工具类 ============== */
+  .ios-bg {
+    background: var(--ios-bg-gradient, linear-gradient(160deg, #d6e4ff, #ead4ff, #ffd6f0));
+  }
+  .ios-glass {
+    background-color: var(--color-bg-card);
+    backdrop-filter: var(--ios-glass-blur, blur(28px) saturate(180%));
+    -webkit-backdrop-filter: var(--ios-glass-blur, blur(28px) saturate(180%));
+    border: 1px solid var(--color-border);
+    box-shadow:
+      0 8px 32px var(--color-shadow),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+  .ios-glass-strong {
+    background-color: var(--color-bg-card-hover);
+    backdrop-filter: var(--ios-glass-blur, blur(28px) saturate(180%));
+    -webkit-backdrop-filter: var(--ios-glass-blur, blur(28px) saturate(180%));
+    border: 1px solid var(--color-border);
+  }
+  /* iOS 主题下增强 nav-blur：更强模糊 + 顶部分隔线 */
+  :root[data-ui-theme='ios'] .nav-blur {
+    backdrop-filter: var(--ios-glass-blur, blur(28px) saturate(180%));
+    -webkit-backdrop-filter: var(--ios-glass-blur, blur(28px) saturate(180%));
+    background-color: var(--color-nav-bg);
+    border-top: 1px solid var(--color-border);
+  }
+  /* iOS 主题下 bg-card 也应用玻璃效果（卡片可选用 ios-glass 类） */
+  :root[data-ui-theme='ios'] .bg-card {
+    background-color: var(--color-bg-card);
+  }
+  /* iOS 主题下的彩光光晕（作为背景装饰） */
+  .ios-glow {
+    position: relative;
+    overflow: hidden;
+  }
+  .ios-glow::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 60%;
+    background: radial-gradient(ellipse at 30% 20%, rgba(10, 132, 255, 0.18), transparent 60%),
+                radial-gradient(ellipse at 70% 40%, rgba(191, 90, 242, 0.18), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  :root[data-ui-theme='ios'].dark .ios-glow::before {
+    background: radial-gradient(ellipse at 30% 20%, rgba(94, 155, 255, 0.22), transparent 60%),
+                radial-gradient(ellipse at 70% 40%, rgba(215, 123, 255, 0.22), transparent 60%);
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Settings",
+  "section": {
+    "appearance": "Appearance",
+    "calendar": "Calendar",
+    "data": "Data",
+    "about": "About",
+    "language": "Language"
+  },
+  "theme": {
+    "label": "Theme",
+    "auto": "Auto by time",
+    "system": "Follow system",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "uiTheme": {
+    "label": "UI Style",
+    "classic": "Classic",
+    "ios": "iOS 26",
+    "google": "Google",
+    "island": "Island",
+    "taiji": "Taiji",
+    "buddhist": "Zen"
+  },
+  "fontSize": {
+    "label": "Font size",
+    "sm": "Small",
+    "md": "Standard",
+    "lg": "Large"
+  },
+  "weekStart": {
+    "label": "Week starts on",
+    "mon": "Monday",
+    "sun": "Sunday"
+  },
+  "zodiacMode": {
+    "label": "Zodiac starts on",
+    "newyear": "Lunar New Year",
+    "spring": "Start of Spring"
+  },
+  "language": {
+    "label": "Language",
+    "auto": "Follow system",
+    "zh-CN": "简体中文",
+    "en": "English"
+  },
+  "data": {
+    "export": "Export data",
+    "import": "Import data",
+    "exportSuccess": "Exported",
+    "importSuccess": "Imported",
+    "importFailed": "Import failed"
+  },
+  "about": {
+    "version": "Version",
+    "feedback": "Send feedback",
+    "privacy": "Privacy policy",
+    "support": "Support"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "设置",
+  "section": {
+    "appearance": "外观",
+    "calendar": "日历",
+    "data": "数据",
+    "about": "关于",
+    "language": "语言"
+  },
+  "theme": {
+    "label": "主题",
+    "auto": "随时间变化",
+    "system": "跟随系统",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "uiTheme": {
+    "label": "UI 主题",
+    "classic": "经典",
+    "ios": "iOS 26",
+    "google": "Google",
+    "island": "海岛",
+    "taiji": "太极",
+    "buddhist": "禅意"
+  },
+  "fontSize": {
+    "label": "字体大小",
+    "sm": "小",
+    "md": "标准",
+    "lg": "大"
+  },
+  "weekStart": {
+    "label": "每周起始日",
+    "mon": "周一",
+    "sun": "周日"
+  },
+  "zodiacMode": {
+    "label": "生肖划分",
+    "newyear": "农历正月初一",
+    "spring": "立春"
+  },
+  "language": {
+    "label": "语言",
+    "auto": "跟随系统",
+    "zh-CN": "简体中文",
+    "en": "English"
+  },
+  "data": {
+    "export": "导出数据",
+    "import": "恢复数据",
+    "exportSuccess": "已导出",
+    "importSuccess": "已导入",
+    "importFailed": "导入失败"
+  },
+  "about": {
+    "version": "版本",
+    "feedback": "意见反馈",
+    "privacy": "隐私政策",
+    "support": "技术支持"
+  }
+}

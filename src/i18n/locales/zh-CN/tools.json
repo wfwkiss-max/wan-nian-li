@@ -1,0 +1,22 @@
+{
+  "title": "工具",
+  "dateCalc": {
+    "name": "日期计算",
+    "desc": "计算两个日期之间的天数"
+  },
+  "dateDiff": {
+    "name": "日期相差",
+    "desc": "计算两个日期相差多少天"
+  },
+  "weekday": {
+    "name": "星期查询",
+    "desc": "查询任意日期是星期几"
+  },
+  "startDate": "开始日期",
+  "endDate": "结束日期",
+  "targetDate": "目标日期",
+  "calculate": "计算",
+  "result": "结果",
+  "days": "天",
+  "weekday": "星期"
+}

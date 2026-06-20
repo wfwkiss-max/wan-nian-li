@@ -1,0 +1,42 @@
+{
+  "title": "Schedules",
+  "addSchedule": "Add Schedule",
+  "editSchedule": "Edit Schedule",
+  "noSchedule": "No schedules yet",
+  "noScheduleHint": "Tap + in the top right to add one",
+  "allSchedules": "All",
+  "completedSchedules": "Completed",
+  "pendingSchedules": "Pending",
+  "field": {
+    "title": "Title",
+    "time": "Start time",
+    "endTime": "End time",
+    "location": "Location",
+    "note": "Note",
+    "type": "Type",
+    "repeat": "Repeat",
+    "color": "Color",
+    "reminder": "Reminder"
+  },
+  "placeholder": {
+    "title": "Enter schedule title",
+    "location": "Optional",
+    "note": "Add a note"
+  },
+  "type": {
+    "schedule": "Schedule",
+    "anniversary": "Anniversary",
+    "birthday": "Birthday"
+  },
+  "repeat": {
+    "none": "Never",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "yearly": "Yearly"
+  },
+  "confirmDelete": "Delete this schedule?",
+  "deleteSuccess": "Schedule deleted",
+  "addSuccess": "Schedule added",
+  "updateSuccess": "Schedule updated"
+}
