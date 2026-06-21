@@ -103,3 +103,7 @@ temp/
 # ===========================================
 resources/icon-only.png
 resources/splash-only.png
+
+# Junk files from PWA dev tools
+*.md.tmp
+说明.md
