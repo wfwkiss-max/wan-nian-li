@@ -26,5 +26,12 @@
   "ganZhi": "干支",
   "zodiac": "生肖",
   "shengXiao": "生肖",
-  "yearInZodiac": "{{zodiac}}年"
+  "yearInZodiac": "{{zodiac}}年",
+  "weather": {
+    "loading": "天气加载中…",
+    "today": "今",
+    "tomorrow": "明",
+    "highLow": "{{high}}°/{{low}}°",
+    "cityTemp": "{{city}}·{{temp}}°"
+  }
 }

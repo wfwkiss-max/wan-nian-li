@@ -26,5 +26,12 @@
   "ganZhi": "Stem-Branch",
   "zodiac": "Zodiac",
   "shengXiao": "Zodiac",
-  "yearInZodiac": "Year of {{zodiac}}"
+  "yearInZodiac": "Year of {{zodiac}}",
+  "weather": {
+    "loading": "Loading weather…",
+    "today": "Today",
+    "tomorrow": "Tmrw",
+    "highLow": "{{high}}°/{{low}}°",
+    "cityTemp": "{{city}} · {{temp}}°"
+  }
 }

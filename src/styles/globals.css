@@ -21,6 +21,12 @@
   --safe-area-top: env(safe-area-inset-top, 0px);
   --safe-area-bottom: env(safe-area-inset-bottom, 0px);
   --keyboard-height: 0px;
+
+  /* 天气条主题变量 */
+  --weather-gradient: linear-gradient(135deg, #4f7df5 0%, #6c5ce7 50%, #a78bfa 100%);
+  --weather-shadow: 0 8px 24px rgba(108, 92, 231, 0.25);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 .dark {
@@ -39,6 +45,11 @@
   --color-accent-gradient-to: #7c6cf7;
   --color-nav-bg: rgba(12, 18, 34, 0.88);
   --color-nav-border: rgba(37, 51, 80, 0.6);
+
+  --weather-gradient: linear-gradient(135deg, #5b8af5 0%, #7c6cf7 50%, #b59cff 100%);
+  --weather-shadow: 0 8px 24px rgba(91, 138, 245, 0.30);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* ===============================================
@@ -65,6 +76,11 @@
   --color-nav-border: rgba(255, 255, 255, 0.6);
   --ios-bg-gradient: linear-gradient(160deg, #d6e4ff 0%, #ead4ff 45%, #ffd6f0 100%);
   --ios-glass-blur: blur(28px) saturate(180%);
+
+  --weather-gradient: linear-gradient(135deg, rgba(10, 132, 255, 0.88) 0%, rgba(94, 92, 230, 0.88) 50%, rgba(191, 90, 242, 0.88) 100%);
+  --weather-shadow: 0 8px 32px rgba(80, 70, 200, 0.20);
+  --weather-blur: blur(20px) saturate(180%);
+  --weather-overlay: rgba(255, 255, 255, 0.18);
 }
 
 /* 深色 iOS */
@@ -86,6 +102,11 @@
   --color-nav-border: rgba(255, 255, 255, 0.1);
   --ios-bg-gradient: linear-gradient(160deg, #0c0a2a 0%, #1f1148 45%, #3a0e5a 100%);
   --ios-glass-blur: blur(30px) saturate(180%);
+
+  --weather-gradient: linear-gradient(135deg, rgba(94, 155, 255, 0.82) 0%, rgba(120, 110, 255, 0.82) 50%, rgba(215, 123, 255, 0.82) 100%);
+  --weather-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --weather-blur: blur(24px) saturate(180%);
+  --weather-overlay: rgba(255, 255, 255, 0.08);
 }
 
 /* ===============================================
@@ -113,6 +134,11 @@
   --google-bg-pattern: radial-gradient(circle at 0% 0%, rgba(26, 115, 232, 0.06) 0%, transparent 35%),
                        radial-gradient(circle at 100% 100%, rgba(52, 168, 83, 0.06) 0%, transparent 35%),
                        radial-gradient(circle at 50% 50%, rgba(251, 188, 4, 0.04) 0%, transparent 50%);
+
+  --weather-gradient: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC04 100%);
+  --weather-shadow: 0 8px 24px rgba(66, 133, 244, 0.32);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* 深色 Google */
@@ -134,6 +160,11 @@
   --color-nav-border: #2d2d2d;
   --google-bg-pattern: radial-gradient(circle at 0% 0%, rgba(138, 180, 248, 0.10) 0%, transparent 35%),
                        radial-gradient(circle at 100% 100%, rgba(129, 201, 149, 0.10) 0%, transparent 35%);
+
+  --weather-gradient: linear-gradient(135deg, #8ab4f8 0%, #81c995 50%, #fdd663 100%);
+  --weather-shadow: 0 8px 24px rgba(138, 180, 248, 0.30);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* ===============================================
@@ -160,6 +191,11 @@
   --color-nav-border: #bae6fd;
   --island-bg-gradient: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 30%, #fef3c7 100%);
   --island-wave: radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.12) 0%, transparent 60%);
+
+  --weather-gradient: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 50%, #10b981 100%);
+  --weather-shadow: 0 8px 24px rgba(14, 165, 233, 0.32);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* 深色海岛 */
@@ -181,6 +217,11 @@
   --color-nav-border: #155e75;
   --island-bg-gradient: linear-gradient(180deg, #042f3a 0%, #064e5c 50%, #0a4a5c 100%);
   --island-wave: radial-gradient(ellipse at 50% 100%, rgba(34, 211, 238, 0.15) 0%, transparent 60%);
+
+  --weather-gradient: linear-gradient(135deg, #22d3ee 0%, #0891b2 50%, #34d399 100%);
+  --weather-shadow: 0 8px 24px rgba(34, 211, 238, 0.30);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* ===============================================
@@ -209,6 +250,11 @@
   --taiji-ink: rgba(26, 26, 26, 0.04);
   --taiji-yang: #1a1a1a;
   --taiji-yin: #fdfaf2;
+
+  --weather-gradient: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 50%, #c1272d 100%);
+  --weather-shadow: 0 8px 24px rgba(60, 40, 20, 0.25);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* 深色太极：墨为底，宣纸为文，金 + 青为强调 */
@@ -232,6 +278,11 @@
   --taiji-ink: rgba(245, 240, 230, 0.03);
   --taiji-yang: #f5f0e6;
   --taiji-yin: #16161a;
+
+  --weather-gradient: linear-gradient(135deg, #2a2a2a 0%, #5a5a5a 50%, #d4a017 100%);
+  --weather-shadow: 0 8px 24px rgba(0, 0, 0, 0.50);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* ===============================================
@@ -260,6 +311,11 @@
   --buddhist-glow: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.35) 0%, transparent 50%);
   --buddhist-saffron: #d4a017;
   --buddhist-sangha: #c1272d;
+
+  --weather-gradient: linear-gradient(135deg, #c1272d 0%, #d4a017 50%, #b8860b 100%);
+  --weather-shadow: 0 8px 24px rgba(193, 39, 45, 0.30);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 /* 深色佛教：蔵青金底，卡片深茶，主色提亮金 + 朱 */
@@ -283,6 +339,11 @@
   --buddhist-glow: radial-gradient(circle at 50% 0%, rgba(240, 195, 60, 0.20) 0%, transparent 50%);
   --buddhist-saffron: #f0c33c;
   --buddhist-sangha: #e84545;
+
+  --weather-gradient: linear-gradient(135deg, #e84545 0%, #f0c33c 50%, #b8860b 100%);
+  --weather-shadow: 0 8px 24px rgba(232, 69, 69, 0.30);
+  --weather-blur: none;
+  --weather-overlay: rgba(255, 255, 255, 0);
 }
 
 * {
