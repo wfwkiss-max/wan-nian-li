@@ -10,7 +10,11 @@
   "background_color": "#ffffff",
   "theme_color": "#4f7df5",
   "orientation": "portrait",
-  "categories": ["utilities", "productivity", "lifestyle"],
+  "categories": [
+    "utilities",
+    "productivity",
+    "lifestyle"
+  ],
   "icons": [
     {
       "src": "/icons/calendar.svg",
@@ -60,36 +64,31 @@
       "short_name": "今日",
       "description": "查看今天的农历和黄历",
       "url": "/?goto=today",
-      "icons": [{ "src": "/icons/calendar.svg", "sizes": "any" }]
+      "icons": [
+        {
+          "src": "/icons/calendar.svg",
+          "sizes": "any"
+        }
+      ]
     },
     {
       "name": "添加日程",
       "short_name": "添加",
       "description": "快速添加一个日程",
       "url": "/schedule?action=new",
-      "icons": [{ "src": "/icons/calendar.svg", "sizes": "any" }]
+      "icons": [
+        {
+          "src": "/icons/calendar.svg",
+          "sizes": "any"
+        }
+      ]
     }
   ],
   "prefer_related_applications": false,
-  "edge_side_panel": { "preferred_width": 480 },
-  "launch_handler": { "client_mode": "auto" }
-}
-{
-  "name": "万年历",
-  "short_name": "万年历",
-  "description": "公历农历查询、黄历、日程管理、日期工具",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#3b82f6",
-  "orientation": "portrait",
-  "icons": [
-    {
-      "src": "/icons/calendar.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ],
-  "categories": ["utilities", "productivity"]
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "launch_handler": {
+    "client_mode": "auto"
+  }
 }
