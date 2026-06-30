@@ -5,6 +5,7 @@ import { MonthGrid } from './MonthGrid';
 import { DayDetail } from './DayDetail';
 import { WeekHeader } from './WeekHeader';
 import { YearMonthPicker } from './YearMonthPicker';
+import WeatherStrip from './WeatherStrip';
 
 function CalendarPage() {
   const { currentYear, currentMonth, prevMonth, nextMonth, goToToday, setMonth } = useCalendarStore();
@@ -38,7 +39,7 @@ function CalendarPage() {
           </button>
           <button
             onClick={goToToday}
-            className="px-2.5 py-1 text-xxs font-medium accent-gradient text-white rounded-full shadow-sm transition-all duration-200 active:scale-95"
+            className="px-3 py-2 min-h-[44px] text-xxs font-medium accent-gradient text-white rounded-full shadow-sm transition-all duration-200 active:scale-95"
           >
             {t('common:action.today')}
           </button>
@@ -69,6 +70,9 @@ function CalendarPage() {
 
       {/* 月网格 */}
       <MonthGrid year={currentYear} month={currentMonth} />
+
+      {/* 天气条 */}
+      <WeatherStrip />
 
       {/* 日详情 */}
       <DayDetail />

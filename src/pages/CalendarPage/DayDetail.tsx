@@ -81,12 +81,12 @@ export function DayDetail() {
             </div>
           )}
 
-          {/* 当天日程 - 左滑删除 */}
+          {/* 当天日程 - 左右滑均可删除 */}
           {daySchedules.length > 0 && (
             <div className="mb-3 space-y-1.5">
               {daySchedules.map((s) => (
                 <SwipeToDelete key={s.id} onDelete={() => deleteSchedule(s.id)}>
-                  <div className="flex items-center gap-2.5 px-2.5 py-2.5 bg-secondary/40">
+                  <div className="flex items-center gap-2 px-2.5 py-2 bg-secondary/40">
                     {/* 完成状态切换 - 44x44 触摸区 */}
                     <button
                       onClick={() => toggleComplete(s.id)}
@@ -94,14 +94,14 @@ export function DayDetail() {
                       aria-label={s.completed ? '标记为未完成' : '标记为完成'}
                     >
                       <span
-                        className="w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all"
+                        className="w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all"
                         style={{
                           borderColor: s.completed ? '#b0b8c8' : (s.color || '#4f7df5'),
                           backgroundColor: s.completed ? '#b0b8c8' : 'transparent',
                         }}
                       >
                         {s.completed && (
-                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                          <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                           </svg>
                         )}
@@ -109,17 +109,17 @@ export function DayDetail() {
                     </button>
                     <div className="flex-1 min-w-0">
                       <p className={cn(
-                        'text-sm font-medium truncate',
+                        'text-xs font-medium truncate',
                         s.completed && 'line-through text-tertiary'
                       )}>{s.title}</p>
                       {s.time && (
-                        <p className="text-xxs text-tertiary">
+                        <p className="text-xxs text-tertiary leading-tight">
                           {s.time}{s.endTime ? ` - ${s.endTime}` : ''}
                         </p>
                       )}
                     </div>
                     <span className={cn(
-                      'text-xxxs px-1.5 py-0.5 rounded',
+                      'text-xxs px-1.5 py-0.5 rounded flex-shrink-0',
                       s.type === 'schedule' && 'bg-primary-50 text-primary-500 dark:bg-primary-900/30',
                       s.type === 'anniversary' && 'bg-pink-50 text-pink-500 dark:bg-pink-900/30',
                       s.type === 'birthday' && 'bg-amber-50 text-amber-500 dark:bg-amber-900/30',

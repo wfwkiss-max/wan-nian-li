@@ -199,20 +199,6 @@ function SettingsPage() {
         </SettingRow>
       </Section>
 
-      {/* 鏁版嵁绠＄悊 */}
-      <Section title={t('settings:section.data')}>
-        <SettingRow label={t('settings:data.export')}>
-          <button className="px-3 py-1.5 text-sm accent-gradient text-white rounded-xl shadow-sm active:scale-95 transition-transform">
-            {t('common:action.export')}
-          </button>
-        </SettingRow>
-        <SettingRow label={t('settings:data.import')}>
-          <button className="px-3 py-1.5 text-sm bg-secondary/60 text-secondary rounded-xl active:scale-95 transition-transform">
-            {t('common:action.import')}
-          </button>
-        </SettingRow>
-      </Section>
-
       {/* 鍏充簬 */}
       <Section title={t('settings:section.about')}>
         <SettingRow label={t('settings:about.version')}>
@@ -249,7 +235,7 @@ function LangButton({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1 text-xs rounded-lg transition-all duration-200 ${
+      className={`flex-1 px-3 py-2 min-h-[44px] text-sm rounded-lg transition-all duration-200 ${
         active
           ? 'bg-card text-primary-500 shadow-sm font-medium'
           : 'text-secondary active:scale-95'

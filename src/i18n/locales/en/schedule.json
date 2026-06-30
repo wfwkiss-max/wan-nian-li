@@ -3,7 +3,7 @@
   "addSchedule": "Add Schedule",
   "editSchedule": "Edit Schedule",
   "noSchedule": "No schedules yet",
-  "noScheduleHint": "Tap + in the top right to add one",
+  "noScheduleHint": "Tap + at the bottom right to add one",
   "allSchedules": "All",
   "completedSchedules": "Completed",
   "pendingSchedules": "Pending",
@@ -38,5 +38,17 @@
   "confirmDelete": "Delete this schedule?",
   "deleteSuccess": "Schedule deleted",
   "addSuccess": "Schedule added",
-  "updateSuccess": "Schedule updated"
+  "updateSuccess": "Schedule updated",
+  "reminderEnable": "Enable reminder",
+  "reminderAdvance": "Notify before",
+  "reminderMethods": "Methods",
+  "methodPopup": "Banner",
+  "methodSound": "Sound",
+  "methodVibrate": "Vibrate",
+  "advance": {
+    "atTime": "On time",
+    "minute": "{{count}} min",
+    "hour": "{{count}} hr",
+    "day": "{{count}} day"
+  }
 }

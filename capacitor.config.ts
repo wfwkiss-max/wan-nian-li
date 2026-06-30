@@ -25,6 +25,11 @@ const config: CapacitorConfig = {
       resize: 'body',
       resizeOnFullScreen: true,
     },
+    LocalNotifications: {
+      smallIcon: 'ic_stat_icon_config_sample',
+      iconColor: '#4f7df5',
+      presentationOptions: ['badge', 'sound', 'banner', 'list'],
+    },
   },
   ios: {
     contentInset: 'automatic',

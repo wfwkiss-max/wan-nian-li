@@ -7,6 +7,7 @@ import { detectBrowserLanguage } from './i18n';
 import { AppRouter } from './app/router';
 import { useTheme } from './hooks/useTheme';
 import { useSettingsStore } from './stores/settings-store';
+import { useScheduleStore } from './stores/schedule-store';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -54,8 +55,7 @@ function useNativeSetup() {
     if (!Capacitor.isNativePlatform()) return;
 
     let cancelled = false;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const handles: Array<{ remove: () => void }> = [];
+    const handles: Array<{ remove: () => void | Promise<void> }> = [];
 
     async function setup() {
       // 状态栏适配
@@ -97,6 +97,42 @@ function useNativeSetup() {
           CapApp.exitApp();
         }
       }));
+
+      // ============= 通知系统初始化 =============
+      try {
+        const { initNotifications, onNotificationTap, resyncAllNotifications } =
+          await import('./services/notifications');
+        const scheduleStore = useScheduleStore.getState();
+
+        // 1) 初始化（请求权限 + 创建 channel + 注册 iOS actions）
+        await initNotifications();
+
+        // 2) 加载所有日程 + 重新同步通知
+        await scheduleStore.loadAll();
+        const all = useScheduleStore.getState().allSchedules;
+        await resyncAllNotifications(all);
+
+        // 3) App resume 时重新同步
+        handles.push(await CapApp.addListener('appStateChange', ({ isActive }) => {
+          if (isActive) {
+            useScheduleStore.getState().loadAll().then(() => {
+              const fresh = useScheduleStore.getState().allSchedules;
+              void resyncAllNotifications(fresh);
+            });
+          }
+        }));
+
+        // 4) 通知点击 → 跳转到对应日程
+        const unsub = await onNotificationTap((scheduleId) => {
+          useScheduleStore.getState().openScheduleById(scheduleId);
+          // 跳到 Schedule 页面
+          window.location.hash = '#/schedule';
+        });
+        handles.push({ remove: unsub });
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.warn('[App] notification init failed:', err);
+      }
     }
 
     setup();
@@ -104,7 +140,9 @@ function useNativeSetup() {
     // 清理：移除所有监听器，防止 React 严格模式下重复注册
     return () => {
       cancelled = true;
-      handles.forEach((h) => h.remove());
+      handles.forEach((h) => {
+        void Promise.resolve(h.remove()).catch(() => {});
+      });
     };
   }, []);
 }

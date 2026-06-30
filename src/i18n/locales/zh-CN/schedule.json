@@ -3,7 +3,7 @@
   "addSchedule": "添加日程",
   "editSchedule": "编辑日程",
   "noSchedule": "还没有日程",
-  "noScheduleHint": "点击右上角 + 添加一个",
+  "noScheduleHint": "点击右下角 + 添加一个",
   "allSchedules": "全部日程",
   "completedSchedules": "已完成",
   "pendingSchedules": "进行中",
@@ -38,5 +38,17 @@
   "confirmDelete": "确定删除此日程？",
   "deleteSuccess": "日程已删除",
   "addSuccess": "日程已添加",
-  "updateSuccess": "日程已更新"
+  "updateSuccess": "日程已更新",
+  "reminderEnable": "开启提醒",
+  "reminderAdvance": "提前",
+  "reminderMethods": "方式",
+  "methodPopup": "弹窗",
+  "methodSound": "声音",
+  "methodVibrate": "振动",
+  "advance": {
+    "atTime": "准时",
+    "minute": "{{count}} 分钟",
+    "hour": "{{count}} 小时",
+    "day": "{{count}} 天"
+  }
 }

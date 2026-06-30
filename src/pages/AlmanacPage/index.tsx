@@ -39,7 +39,7 @@ function AlmanacPage() {
   const { almanac, lunar } = info;
 
   return (
-    <div className="p-4 space-y-3">
+    <div className="p-4 space-y-2.5">
       {/* 日期显示 - 点击可选择 */}
       <button
         onClick={() => setPickerOpen(true)}
@@ -102,10 +102,10 @@ function AlmanacPage() {
       </div>
 
       {/* 详细信息 */}
-      <div className="bg-card rounded-2xl p-4 shadow-card space-y-0">
-        <h3 className="text-sm font-bold mb-3 flex items-center gap-2">
+      <div className="bg-card rounded-2xl p-3.5 shadow-card space-y-0">
+        <h3 className="text-sm font-bold mb-2.5 flex items-center gap-2">
           <span className="w-1 h-4 rounded-full accent-gradient" />
-          Details
+          {t('almanac:details')}
         </h3>
         <div className="divide-y divide-gray-50 dark:divide-gray-800/50">
           <InfoRow label={t('almanac:jianChu')} value={almanac.jianChu} />
@@ -119,8 +119,8 @@ function AlmanacPage() {
       </div>
 
       {/* 吉日筛选 */}
-      <div className="bg-card rounded-2xl p-4 shadow-card">
-        <h3 className="text-sm font-bold mb-3 flex items-center gap-2">
+      <div className="bg-card rounded-2xl p-3.5 shadow-card">
+        <h3 className="text-sm font-bold mb-2.5 flex items-center gap-2">
           <span className="w-1 h-4 rounded-full bg-gradient-to-b from-amber-400 to-orange-400" />
           吉日查询
         </h3>
@@ -163,8 +163,8 @@ function AlmanacPage() {
 
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-start gap-3 text-sm py-2.5">
-      <span className="text-tertiary text-xxs w-10 flex-shrink-0 bg-secondary/40 px-1.5 py-0.5 rounded text-center">{label}</span>
+    <div className="flex items-start gap-3 text-sm py-2">
+      <span className="text-tertiary text-xxs w-10 flex-shrink-0 bg-secondary/40 px-1.5 py-0.5 rounded text-center leading-tight">{label}</span>
       <span className="flex-1 leading-relaxed">{value}</span>
     </div>
   );
